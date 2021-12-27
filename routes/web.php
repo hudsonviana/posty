@@ -10,11 +10,12 @@ Route::get('/', function () {
     return view('home');
 })->name('homeName');
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboardName');
+Route::get('/dashboard', [DashboardController::class, 'index'])
+->name('dashboardName');
 
 Route::post('/logout', [LogoutController::class, 'store'])->name('logoutName');
 
-Route::get('/login', [LoginController::class, 'index'])->name('loginName');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 
 Route::get('/register', [RegisterController::class, 'index'])->name('registerName');
