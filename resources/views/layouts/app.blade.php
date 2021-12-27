@@ -17,10 +17,15 @@
             <li class="p-3"><a href="#">Post</a></li>
         </ul>
         <ul class="flex items-center">
-            <li class="p-3"><a href="#">Hudson Andrade</a></li>
-            <li class="p-3"><a href="#">Login</a></li>
-            <li class="p-3"><a href="{{ route('registerName') }}">Register</a></li>
-            <li class="p-3"><a href="#">Logout</a></li>
+            @auth
+                <li class="p-3"><a href="#">Hudson Andrade</a></li>
+                <li class="p-3"><a href="#">Logout</a></li>
+            @endauth
+
+            @guest
+                <li class="p-3"><a href="#">Login</a></li>
+                <li class="p-3"><a href="{{ route('registerName') }}">Register</a></li>
+            @endguest
         </ul>
     </nav>
 
