@@ -7,8 +7,18 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
+
     public function index() {
-        return view('posts.index');
+
+        $posts = Post::get();
+        
+        return view('posts.index', [
+            'posts' => $posts
+        ]);
     }
 
     public function store(Request $request) {
