@@ -15,7 +15,7 @@ class PostController extends Controller
     public function index() {
 
         // $posts = Post::get();
-        $posts = Post::paginate(2);
+        $posts = Post::with(['user', 'likes'])->paginate(20); // with(['user', 'likes']) ==> Eager loading (para reduzir e nº de querys). 'user' e 'likes' são funções de relacionamento do model Post
 
         return view('posts.index', [
             'posts' => $posts

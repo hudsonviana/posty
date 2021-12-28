@@ -30,6 +30,7 @@
                         <p class="mb-2">{{ $post->body }}</p>
 
                         <div class="flex items-center">
+
                             @if (!$post->likedBy(auth()->user()))
                                 <form action="{{ route('postsName.likes', $post) }}" method="POST" class="mr-1">
                                     @csrf
@@ -42,6 +43,7 @@
                                     <button type="submit" class="text-blue-500">Unlike</button>
                                 </form>
                             @endif
+                            
                             <span>{{ $post->likes->count() }} {{ Str::plural('like', $post->likes->count()) }}</span>
                         </div>
                     </div>    
