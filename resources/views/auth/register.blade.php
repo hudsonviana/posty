@@ -47,8 +47,8 @@
 
                 <div class="mb-4">
                     <label for="password_confirmation" class="sr-only">Confirmar Senha</label>
-                    <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirme sua senha" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('name') border-red-500 @enderror" value="">
-                    @error('password')
+                    <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Confirme sua senha" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('password_confirmation') border-red-500 @enderror" value="">
+                    @error('password_confirmation')
                         <div class="text-red-500 mt-2 text-sm">
                             {{ $message }}
                         </div>

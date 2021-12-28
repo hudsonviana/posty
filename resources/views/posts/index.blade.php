@@ -30,7 +30,7 @@
                     </div>    
                 @endforeach
 
-                {{ $posts->links() }}
+                {{ $posts->links() }} {{-- comando para mostrar as páginas --}}
             @else
                 <p>Não há nenhum post a ser exibido.</p>
             @endif
