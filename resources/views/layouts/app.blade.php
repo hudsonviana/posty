@@ -10,7 +10,7 @@
 </head>
 <body class="bg-gray-200">
 
-    <nav class="p-6 bg-white flex justify-between mb-6">
+    <nav class="p-3 bg-white flex justify-between mb-6">
         <ul class="flex items-center">
             <li class="p-3"><a href="/">Home</a></li>
             <li class="p-3"><a href="{{ route('dashboardName') }}">Dashboard</a></li>
