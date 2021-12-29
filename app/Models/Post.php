@@ -17,6 +17,12 @@ class Post extends Model
         return $this->likes->contains('user_id', $user->id); //colection
     }
 
+    /*
+    public function ownedBy(User $user) {
+        return $user->id === $this->user_id; // esta função foi movida para o policy
+    }
+    */
+
     public function user() {
         return $this->belongsTo(User::class);
     }
